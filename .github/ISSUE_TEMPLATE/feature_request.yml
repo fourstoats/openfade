@@ -1,0 +1,79 @@
+name: Feature request
+description: Propose a capability, a new language, or a change to the core design
+title: "[feature] "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Larger proposals are better as an issue than as a pull request. Please do
+        not open a pull request for a new feature before discussing it here.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: |
+        What are you trying to do that is hard today? Describe the situation
+        rather than the solution — the solution is usually the part we would
+        most like to talk you out of.
+      placeholder: |
+        I want to know whether a converted strategy behaves the same way in both
+        languages, but I have no way to check. A diff report would tell me.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you are proposing
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of the lifecycle
+      options:
+        - Corpus / retrieval
+        - Code generation
+        - Conversion
+        - Validation
+        - Debugging
+        - Backtesting
+        - Research / analysis
+        - Decision layer
+        - Automation
+        - Infrastructure / DX
+        - Not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: dialect
+    attributes:
+      label: Does this need a new language?
+      description: See the new-dialect requirements in CONTRIBUTING.md.
+      options:
+        - "No — works with Pine and Lipi as they are"
+        - "Yes — a language other than Pine or Lipi"
+        - "Unsure"
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What have you tried instead
+      description: Existing tools, workarounds, or another project that partly solves this.
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: contribution
+    attributes:
+      label: Would you like to work on this
+      description: We would rather you did. Claiming an issue before starting avoids duplicated effort.
+    validations:
+      required: true

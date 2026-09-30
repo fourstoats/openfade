@@ -1,0 +1,71 @@
+name: Corpus or validator contribution
+description: Propose a built-in, a fixture, a delta-table entry, or a validator rule
+title: "[corpus] "
+labels: ["corpus", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is the highest-value contribution to Openfade right now, and it needs
+        trading domain knowledge more than it needs software engineering.
+        See [CONTRIBUTING.md](/fourstoats/openfade/blob/main/CONTRIBUTING.md).
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What are you contributing
+      options:
+        - Built-in fixture (signature, parameter types, return type, example)
+        - Delta table entry (how Pine and Lipi differ)
+        - Validator rule
+        - Corpus extractor fix
+        - Inconsistency in upstream documentation
+    validations:
+      required: true
+
+  - type: dropdown
+    id: dialect
+    attributes:
+      label: Language
+      options:
+        - Pine Script
+        - Lipi
+        - Both
+    validations:
+      required: true
+
+  - type: textarea
+    id: entry
+    attributes:
+      label: The entry or rule
+      description: |
+        For a fixture, the symbol and what you believe its signature to be. For a
+        delta entry, the two sides. For a validator rule, what is currently
+        accepted that should not be, and why.
+      render: text
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: Which page of the official reference did you take this from?
+      placeholder: https://www.tradingview.com/pine-script-reference/v6/#fun_ta.sma
+    validations:
+      required: true
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Minimal example, if you have one
+      description: A short snippet that uses this built-in correctly. Examples we did not author must be paraphrased, not copied.
+      render: code
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I wrote this from my own understanding or paraphrased it. I did not paste vendor documentation.
+        - label: I am confident in the signature and types, not just the usage.

@@ -1,0 +1,105 @@
+name: Bug report
+description: Something Openfade did incorrectly, or failed to do
+title: "[bug] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. If this is a security issue, do not use this form —
+        see [SECURITY.md](/fourstoats/openfade/blob/main/SECURITY.md).
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What did you do, and what did Openfade do instead?
+      placeholder: |
+        I described a strategy that enters long when RSI crosses above 30 with a
+        2% stop loss. Openfade produced a script that validated cleanly but
+        generated no trades.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected instead
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Area
+      options:
+        - Corpus / built-in lookup
+        - Generated script
+        - Conversion
+        - Validation
+        - CLI
+        - Documentation
+        - Other or not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: input
+    attributes:
+      label: Input
+      description: The prompt or the script you gave Openfade. Paste the script exactly as you supplied it.
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: output
+    attributes:
+      label: Output
+      description: The script or response Openfade produced. Paste it in full.
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: script
+    attributes:
+      label: Generated script, if this is a script problem
+      description: |
+        If the generated script compiles but behaves incorrectly, the script is
+        the most useful thing you can include. That failure mode is exactly what
+        we are trying to eliminate, and every real instance makes the validator
+        better.
+      render: text
+
+  - type: textarea
+    id: expected-script
+    attributes:
+      label: What the script should have done
+      description: If you know what correct behaviour looks like, describe it. A rough description is fine.
+      render: text
+
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      placeholder: main, or a commit SHA
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system, Python and Go versions, model provider and model used, whether local or hosted.
+      render: text
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues for this.
+        - label: I removed any API keys or account details from what I pasted above.

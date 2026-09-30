@@ -30,3 +30,58 @@ go.work.sum
 # Editor/IDE
 # .idea/
 # .vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python tooling
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Node (docs tooling, if added)
+node_modules/
+
+# Local corpus and runtime state
+#
+# The documentation corpus is built locally at ingest time and is never
+# committed. It contains material derived from TradingView and GoCharting
+# documentation; see docs/comparison.md#documentation-and-licensing
+.openfade/
+*.corpus/
+
+# Local overrides
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db

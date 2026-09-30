@@ -1,0 +1,36 @@
+# Normalise line endings in the repository.
+#
+# Without this, contributors on Windows and contributors on Linux produce
+# diffs that are entirely line-ending noise. Checked in as text with LF in the
+# repository and converted to the platform's native ending on checkout.
+* text=auto eol=lf
+
+# Windows scripts must keep CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Documentation and code: always LF, no conversion
+*.md   text eol=lf
+*.py   text eol=lf
+*.go   text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+
+# Binary assets are never touched
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.webp binary
+*.ico  binary
+*.pdf  binary
+*.zip  binary
+*.gz   binary
+*.wasm binary
+
+# Generated or vendored — never diffed, never line-ending converted
+vendor/**        -diff -text
+node_modules/**  -diff -text
+.openfade/**     -diff -text
+*.corpus         -diff -text
