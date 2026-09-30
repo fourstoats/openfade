@@ -10,7 +10,7 @@ title: "Roadmap"
 
 # Roadmap
 
-**How to read this.** Unchecked means **not started** — not partially done. We
+**How to read this.** Unchecked means **not started** – not partially done. We
 use explicit status rather than percentages because "60% complete" on a
 distributed open-source project is not a meaningful claim.
 
@@ -22,7 +22,7 @@ architecture only.
 
 ---
 
-## Phase 0 — Foundations
+## Phase 0 – Foundations
 
 *Status: in progress*
 
@@ -33,7 +33,7 @@ architecture only.
 - [ ] `docker-compose.yml` with PostgreSQL and pgvector
 - [ ] `AGENTS.md` conventions enforced by CI
 
-## Phase 1 — The corpus
+## Phase 1 – The corpus
 
 *Status: not started*
 
@@ -47,7 +47,7 @@ architecture only.
 - [ ] Hand-authored fixture set per dialect
 - [ ] Retrieval evaluation harness with published recall numbers
 
-## Phase 2 — Dialects and the validator
+## Phase 2 – Dialects and the validator
 
 *Status: not started*
 
@@ -61,7 +61,7 @@ architecture only.
 - [ ] Validator: structural and platform limit checks
 - [ ] Negative test suite per dialect
 
-## Phase 3 — First working path
+## Phase 3 – First working path
 
 *Status: not started*
 
@@ -72,7 +72,7 @@ architecture only.
 - [ ] `openfade` CLI
 - [ ] Public benchmark for generation validity
 
-## Phase 4 — Conversion
+## Phase 4 – Conversion
 
 *Status: not started*
 
@@ -83,7 +83,7 @@ architecture only.
 - [ ] Round-trip semantic equivalence tests
 - [ ] Semantic difference report
 
-## Phase 5 — Beyond code
+## Phase 5 – Beyond code
 
 *Status: not started*
 

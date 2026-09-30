@@ -12,7 +12,7 @@ title: "AGENTS.md"
 
 Instructions for AI agents working in the Openfade repository.
 
-## Current state — read this first
+## Current state – read this first
 
 **This repository has no implementation.** As of the initial commit it contains
 only documentation: `README.md`, `VISION.md`, `docs/`, and the community health
@@ -70,7 +70,7 @@ Do not compromise these, even if asked to "just get it working":
     └── roadmap.md
 ```
 
-Planned layout, for orientation only — none of this exists yet:
+Planned layout, for orientation only – none of this exists yet:
 
 ```
 openfade/          # Python: dialects, corpus, retrieval, validation, agent graph
@@ -99,10 +99,10 @@ Rules:
 - `summary` is one line, not a sentence fragment. It answers "what is this?"
   in isolation, because it is often read without the body.
 - `read_when` entries are **situations, not topics.** "You want to convert a
-  Pine script to Lipi" is useful. "Pine and Lipi" is not — it does not help
+  Pine script to Lipi" is useful. "Pine and Lipi" is not – it does not help
   anyone decide whether to read the page.
 - Three to five entries. More than that and the list stops being scannable.
-- No `read_when` on `README.md` — it is the entry point, not a retrieved page.
+- No `read_when` on `README.md` – it is the entry point, not a retrieved page.
 - Root-level `AGENTS.md` and `VISION.md` keep theirs, because agents do route on
   them.
 
@@ -139,7 +139,7 @@ developers who will check whether claims are true.
 There is no test suite yet. When one exists:
 
 - Corpus extraction is tested against **known-good fixtures** checked into the
-  repository as our own authored data — not scraped vendor content.
+  repository as our own authored data – not scraped vendor content.
 - The validator is tested against both passing and deliberately broken scripts
   per dialect. A validator with no negative tests is not a validator.
 - Dialect translation is tested as a **round trip**: Pine → Lipi → Pine, with

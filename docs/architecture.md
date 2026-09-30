@@ -22,7 +22,7 @@ prompting problem.
 
 Pine Script is heavily represented in model training data. Lipi is barely
 represented at all. A general model asked to convert between them produces
-output that is confident, idiomatic, and wrong — because the statistical path of
+output that is confident, idiomatic, and wrong – because the statistical path of
 least resistance leads back to Pine. Prompt engineering does not fix this. The
 model does not know it is wrong.
 
@@ -49,7 +49,7 @@ other people's libraries.
 
 If L2 is weak, the product is a trading-themed chatbot, and GoCharting already
 ships one of those. Engineering effort should therefore go disproportionately to
-L2 — even though it is the least visible layer.
+L2 – even though it is the least visible layer.
 
 ## L2 in detail
 
@@ -89,14 +89,14 @@ one architecture serves both.
 | Function declaration | `name(args) =>` | `func`, `def` | structural |
 | Return | implicit, last expression | explicit `return` | structural |
 | Type qualifiers | `const` `input` `simple` `series` | plus `intra` | Lipi has no Pine equivalent |
-| Plotting | `plot()`, `plotshape()` — functions | `plot`, `plotStyle`, `hline`, `shape`, `chartPoint` — types | structural, not a rename |
+| Plotting | `plot()`, `plotshape()` – functions | `plot`, `plotStyle`, `hline`, `shape`, `chartPoint` – types | structural, not a rename |
 | Version declaration | `//@version=6` | none | asymmetric |
 | `request.security` | supported | supported | highest-risk, most semantic drift |
 
 Two cautions on this table. First, `structural_differences` and the plotting
 split are **inferred** from keyword and type listings, not confirmed against the
 full reference. The corpus build is what converts inference into fact. Second,
-GoCharting's own documentation contains an internal inconsistency — it describes
+GoCharting's own documentation contains an internal inconsistency – it describes
 `talib.sma()` as belonging to the `ta` namespace in the same sentence it uses the
 `talib.` prefix. Ingested naively, that teaches a model both names are correct.
 The corpus builder needs an explicit alias table and a conflict report, not
@@ -128,7 +128,7 @@ Retrieval then splits by intent:
   (`talib.rsi`), the model needs the *signature*, not a paragraph. A lookup
   beats a similarity search here.
 - **Semantic fallback** over prose pages for idioms, platform limits, and
-  gotchas — the things that are genuinely narrative.
+  gotchas – the things that are genuinely narrative.
 
 Storing symbols as rows rather than chunks is materially more accurate than
 chunking documentation into paragraphs and hoping the right one is retrieved.
@@ -146,19 +146,19 @@ we would build it before the generator.
 Checks, in increasing cost:
 
 1. **Version annotation** present and parseable
-2. **Required declaration** — exactly one valid declaration statement
-3. **Symbol resolution** — every namespace and function used exists in the
+2. **Required declaration** – exactly one valid declaration statement
+3. **Symbol resolution** – every namespace and function used exists in the
    dialect, with the right arity
-4. **Cross-dialect contamination** — no `ta.*` in a Lipi script, no `talib.*` in
+4. **Cross-dialect contamination** – no `ta.*` in a Lipi script, no `talib.*` in
    a Pine script
-5. **Type qualifier conflicts** — the `const` → `input` → `simple` → `series`
+5. **Type qualifier conflicts** – the `const` → `input` → `simple` → `series`
    hierarchy, where a Pine-specific error class lives
-6. **Structural rules** — global-scope indentation, which is a genuine Pine
+6. **Structural rules** – global-scope indentation, which is a genuine Pine
    constraint that naive generators violate
-7. **Platform limits** — script size, token budget, loop limits
+7. **Platform limits** – script size, token budget, loop limits
 
 Checks 1–4 are structural and fast. Check 7 may require Pine compilation, which
-we cannot do — TradingView exposes no public compiler API. That is a known gap
+we cannot do – TradingView exposes no public compiler API. That is a known gap
 and it is why the static checks need to be thorough rather than best-effort.
 
 The generate → validate → repair loop is what turns a validator into a product:

@@ -14,7 +14,7 @@ title: "Pull Request"
 ## The problem
 
 <!--
-What was wrong, missing, or slow. Not a restatement of the diff — the diff
+What was wrong, missing, or slow. Not a restatement of the diff – the diff
 shows what changed, this explains why it needed to change.
 -->
 

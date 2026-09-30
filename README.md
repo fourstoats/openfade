@@ -4,11 +4,11 @@
   </a>
   <p><strong>Turn a trading idea into Pine Script and Lipi that actually compile.</strong></p>
   <p>
-    <a href="#contents">Contents</a> ·
-    <a href="#why-a-general-llm-fails-at-this">Why LLMs fail here</a> ·
     <a href="#architecture">Architecture</a> ·
+    <a href="#contributing">Contributing</a> ·
     <a href="#roadmap">Roadmap</a> ·
-    <a href="#contributing">Contributing</a>
+    <a href="#documentation">Documentation</a> ·
+    <a href="https://github.com/fourstoats/openfade/discussions">Discussions</a>
   </p>
 </div>
 
@@ -33,28 +33,6 @@
 > The parts that need contributors most, the corpus and the validator, are
 > exactly the parts where domain knowledge matters more than engineering
 > effort. See [Contributing](#contributing).
-
----
-
-## Contents
-
-- [The problem](#the-problem)
-- [What Openfade does](#what-openfade-does)
-- [Why a general LLM fails at this](#why-a-general-llm-fails-at-this)
-- [Language support](#language-support)
-- [Architecture](#architecture)
-- [The corpus](#the-corpus)
-- [The validator](#the-validator)
-- [Planned command surface](#planned-command-surface)
-- [Roadmap](#roadmap)
-- [Documentation](#documentation)
-- [Contributing](#contributing)
-- [Where help is needed most](#where-help-is-needed-most)
-- [Your first contribution](#your-first-contribution)
-- [Community](#community)
-- [Star history](#star-history)
-- [Frequently asked questions](#frequently-asked-questions)
-- [License](#license)
 
 ---
 

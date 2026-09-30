@@ -27,7 +27,7 @@ channel.
 
 <!--
 TODO(owner): if a monitored security mailbox is added, list it here as a
-secondary channel. Do not add an address that nobody reads — a dead contact in
+secondary channel. Do not add an address that nobody reads – a dead contact in
 a security policy is worse than no contact at all, because a researcher who
 trusts it will wait.
 -->
@@ -41,7 +41,7 @@ Include:
 
 You should get an acknowledgement within 72 hours. We will confirm receipt, tell
 you what we think the severity is, and keep you updated as we work on it. We will
-not ask you to keep the issue secret indefinitely — we will tell you when we
+not ask you to keep the issue secret indefinitely – we will tell you when we
 intend to disclose, and we will credit you in the advisory unless you would
 rather we did not.
 
@@ -79,7 +79,7 @@ Out of scope:
 - **Lack of rate limiting on a self-hosted instance** you control.
 - **Social engineering of a user into approving a trade.** Openfade requires
   explicit human approval for anything touching a live account. If a user is
-  deceived into approving something, that is not a vulnerability in Openfade —
+  deceived into approving something, that is not a vulnerability in Openfade –
   report it anyway if the interface made it easier than it should have been.
 
 ## Hard boundaries
@@ -99,7 +99,7 @@ environment variable, or API parameter that disables them.
   TradingView or GoCharting documentation.
 - **No hidden telemetry.** There is no analytics collection. If that changes it
   will be opt-in, documented on a dedicated page, and disclosed in the README
-  and this file — not buried in a changelog.
+  and this file – not buried in a changelog.
 
 ## Supply chain
 
@@ -117,7 +117,7 @@ user machines.
 
 We are a small team and cannot triage a high volume of reports quickly. If you
 are a researcher and want to do responsible disclosure, open an advisory and
-tell us your timeline — we will work within it.
+tell us your timeline – we will work within it.
 
 ## Supported versions
 

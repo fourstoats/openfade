@@ -17,7 +17,7 @@ genuinely useful work available to people who have never seen this codebase.
 
 **Openfade contains documentation only.** There is no build, no test suite, and
 no released version. If you came here expecting a running project, that is
-accurate — it does not exist yet.
+accurate – it does not exist yet.
 
 This has a practical consequence: the most valuable contributions right now are
 **not** features. They are the foundations described below, and several of them
@@ -30,7 +30,7 @@ In priority order:
 ### 1. Corpus fixtures
 
 The corpus is the foundation. We build it locally from upstream documentation,
-but we need **known-good, hand-authored fixtures** committed to the repository —
+but we need **known-good, hand-authored fixtures** committed to the repository –
 our own authored data, never scraped vendor text.
 
 A fixture is a small, correct record of a language built-in: signature,
@@ -42,7 +42,7 @@ requires no infrastructure to get started.
 
 ### 2. The dialect delta table
 
-We maintain an explicit, versioned description of how Pine and Lipi differ —
+We maintain an explicit, versioned description of how Pine and Lipi differ –
 namespace renames, keyword substitutions, and structural differences that a
 rename cannot express. It is currently partially derived and partially
 inferred. If you can verify entries against the official references, that is
@@ -71,7 +71,7 @@ license, and maintenance status would save real time.
 ### 5. Documentation
 
 Every file needs `read_when` frontmatter (see below). If a page is hard to
-write, that is usually a sign the underlying design is not settled yet — open an
+write, that is usually a sign the underlying design is not settled yet – open an
 issue instead.
 
 ## Setup
@@ -107,7 +107,7 @@ title: "Human title"
 
 This is a functional retrieval index, not decoration. Humans and agents both
 use it to decide which page to load. `read_when` entries must be **situations**,
-not topics — "you are converting a Pine script to Lipi" routes; "Pine and Lipi"
+not topics – "you are converting a Pine script to Lipi" routes; "Pine and Lipi"
 does not. Keep it to three to five entries.
 
 More detail in [`AGENTS.md`](AGENTS.md).
@@ -180,7 +180,7 @@ namespaces, and we would rather know that up front.
 Open an issue. Include the input, the actual output, the expected output, and
 your Openfade version or commit. If the problem is a generated script that
 validates but does not behave as described, the script itself is the most useful
-thing you can include — that is exactly the failure mode we are trying to
+thing you can include – that is exactly the failure mode we are trying to
 eliminate, and each real instance makes the validator better.
 
 Security issues go to [`SECURITY.md`](SECURITY.md), not the issue tracker.

@@ -51,7 +51,7 @@ The first four capabilities are:
 3. Pine Script → Lipi
 4. Lipi → Pine Script
 
-The reason that is hard — and the reason a generic chatbot does not solve it —
+The reason that is hard – and the reason a generic chatbot does not solve it –
 is that Pine Script is heavily represented in model training data and Lipi is
 barely represented at all. A general model asked to convert between them emits
 Pine with a Lipi-shaped wrapper: fluent, confident, and wrong.

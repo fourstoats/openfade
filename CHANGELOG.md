@@ -1,5 +1,5 @@
 ---
-summary: "Release history for Openfade. There are no releases yet — this tracks notable changes on main."
+summary: "Release history for Openfade. There are no releases yet – this tracks notable changes on main."
 read_when:
   - You want to see what has changed recently
   - You are tracking whether a specific change has landed
@@ -61,4 +61,4 @@ Anyone is welcome to pick up the first unchecked item on
 
 | Version | Date | Status |
 | --- | --- | --- |
-| `0.1.0` | — | planned, pre-alpha |
+| `0.1.0` | – | planned, pre-alpha |

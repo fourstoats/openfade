@@ -13,7 +13,7 @@ title: "Openfade Vision"
 Openfade is an open AI agent platform for trading.
 
 It runs on your machines, uses your models, and turns a trading idea into
-working, validated, testable code — then keeps going into research, backtesting,
+working, validated, testable code – then keeps going into research, backtesting,
 analysis, and eventually automation.
 
 This document explains the current state and direction of the project.
@@ -28,7 +28,7 @@ Contribution guide: [`CONTRIBUTING.md`](CONTRIBUTING.md)
 ## The problem
 
 A trader may fully understand market structure, indicators, risk management,
-and entry/exit logic — and still be unable to turn that into running code. The
+and entry/exit logic – and still be unable to turn that into running code. The
 barrier is not trading knowledge. It is the gap between a concept and a
 specific language's syntax, type system, namespace conventions, and platform
 limits.
@@ -54,12 +54,12 @@ middle is where the hard, defensible, unglamorous work is.
 Pine Script and GoCharting's Lipi are the right entry point for three reasons.
 
 1. **They are the languages traders actually use.** Not what developers find
-   interesting — what people pay for charts with.
+   interesting – what people pay for charts with.
 2. **They are structurally similar.** Both are bar-by-bar cloud-executed
    scripting languages with `syminfo` namespaces, history-referencing operators,
    technical-analysis namespaces, and indicator/strategy declarations. A single
    architecture with a thin dialect layer serves both. This is not a
-   coincidence we are exploiting opportunistically — it means the hard problem
+   coincidence we are exploiting opportunistically – it means the hard problem
    is solved once.
 3. **The failure modes are real and specific.** Pine is well-represented in
    model training data. Lipi is barely represented at all. A general model asked
@@ -77,7 +77,7 @@ If that is true, the defensible core of Openfade is:
 
 - **A structured symbol corpus.** Built locally from upstream documentation.
   One row per built-in: signature, parameter types, return type, overloads,
-  description, remarks, examples. Not prose chunks — a queryable API surface.
+  description, remarks, examples. Not prose chunks – a queryable API surface.
 - **A dialect layer.** An explicit, versioned description of how each language
   differs. Not a translation prompt.
 - **A validator.** Static analysis that runs before output reaches the user,
@@ -87,11 +87,11 @@ A wrapper around a general model gets none of these. That is the moat, and it
 is where engineering effort should go disproportionately.
 
 If we ship a beautiful agent system on top of a weak corpus, we have built a
-trading-themed chatbot — and GoCharting already ships one of those.
+trading-themed chatbot – and GoCharting already ships one of those.
 
 ## Current focus
 
-**Priority — the core that everything else needs:**
+**Priority – the core that everything else needs:**
 
 - Corpus extraction for Pine v6 and Lipi v1, built locally and reproducibly
 - The dialect layer and its Pine↔Lipi translation table
@@ -102,7 +102,7 @@ trading-themed chatbot — and GoCharting already ships one of those.
 **Next:**
 
 - Conversions in both directions as first-class operations, not a side effect
-- Documentation retrieval for concepts, idioms, and platform limits — not just
+- Documentation retrieval for concepts, idioms, and platform limits – not just
   signatures
 - An evaluation harness with published benchmarks
 - A decision layer for routing and risk gates

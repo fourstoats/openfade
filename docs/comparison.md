@@ -21,7 +21,7 @@ is a statement of intent. Nothing described here does anything yet.
 Naming individual products and ranking them ages badly, creates legal exposure,
 and flatters whichever project writes it. So this compares *approaches*.
 
-### Approach 1 — general assistant with documentation pasted in
+### Approach 1 – general assistant with documentation pasted in
 
 You paste the Pine or TradingView docs into a capable model, or use a coding
 assistant that has them in context, and ask for a script.
@@ -41,7 +41,7 @@ anything is off.
 
 **Choose this if** you want one script now and will verify it yourself.
 
-### Approach 2 — purpose-built commercial script generators
+### Approach 2 – purpose-built commercial script generators
 
 Commercial tools that specialise in generating indicators and strategies for a
 specific platform, often with backtesting and a visual editor attached.
@@ -62,7 +62,7 @@ generation but does not solve cross-language translation.
 **Choose this if** you want a polished, integrated experience on one platform and
 do not need openness or conversion.
 
-### Approach 3 — algorithmic trading frameworks
+### Approach 3 – algorithmic trading frameworks
 
 QuantConnect, backtesting.py, vectorbt, and similar. Full control over
 research, data, and execution.
@@ -73,12 +73,12 @@ the goal is a production trading system, this is the correct category of tool.
 
 **Where it breaks.** Requires programming. The barrier Openfade is trying to
 remove is precisely the one these require you to clear. They also do not
-generate platform-native scripts — they produce their own code.
+generate platform-native scripts – they produce their own code.
 
 **Choose this if** you can code and want a real research environment. We plan to
 integrate with this category rather than replace it.
 
-### Approach 4 — general coding agents
+### Approach 4 – general coding agents
 
 OpenCode, Claude Code, Codex, and similar agentic coding tools.
 
@@ -103,7 +103,7 @@ Not better at any of the above. Different in four specific ways:
 | --- | --- | --- |
 | Knowledge of the language | training data, or pasted docs | extracted, versioned, queryable symbol corpus |
 | Cross-language | unsupported, or unreliable | explicit dialect table, lossy cases declared |
-| Correctness signal | none — you find out when it fails to compile | static validation before output reaches you |
+| Correctness signal | none – you find out when it fails to compile | static validation before output reaches you |
 | Lock-in | platform, provider, or both | your keys, your models, your data, your machine |
 
 The first three are the same claim three ways: **we are trying to make "it
@@ -131,7 +131,7 @@ built locally, on your machine, when you run the corpus build step.
 The reason is not only legal. Building on demand means that when Pine gains a
 version or Lipi changes a namespace, your next build picks it up. We do not have
 to cut a release, and the corpus cannot go stale relative to upstream. We ship
-the extractor and the schema — the furnace, not the bread.
+the extractor and the schema – the furnace, not the bread.
 
 The practical consequence for contributors: **do not commit scraped vendor
 documentation.** Hand-authored fixtures describing a signature are fine and
@@ -155,7 +155,7 @@ endorsed by TradingView, Inc. or GoCharting.
 Openfade is a development tool. It produces code and analysis. It is not an
 investment adviser, does not provide signals, and makes no claim about future
 returns. A strategy that Openfade generates, validates, and helps you backtest
-can still lose money — in fact most will, over enough time and enough markets.
+can still lose money – in fact most will, over enough time and enough markets.
 
 If a tool that generates plausible strategies is more dangerous to you than one
 that does not exist, that is a reasonable position and you should not use this.
