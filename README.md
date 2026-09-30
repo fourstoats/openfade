@@ -1,4 +1,8 @@
-<h1 align="center">Openfade</h1>
+<p align="center">
+  <a href="https://github.com/fourstoats/openfade">
+    <img width="403" height="72" alt="Openfade" src="https://github.com/user-attachments/assets/2faccbe5-54ba-4f0c-9eb8-a121dcd6572f" />
+  </a>
+</p>
 
 <p align="center">
   <strong>Turn a trading idea into working, validated Pine Script and Lipi — then keep going.</strong><br />
