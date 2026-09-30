@@ -128,16 +128,36 @@ More detail in [`AGENTS.md`](AGENTS.md).
 
 ### Commit messages
 
-Conventional Commits, lightly used:
+[Conventional Commits](https://www.conventionalcommits.org/), lightly used.
 
 ```
-corpus: add Lipi talib.sma fixture
-validator: reject undefined namespace
+feat(corpus): add Lipi talib.sma fixture
+fix(validator): reject undefined namespace
 docs: clarify Pine version annotation
-dialect: mark request.security as lossy
+refactor(dialect): mark request.security as lossy
 ```
 
-The scope that helps most is `corpus`, `dialect`, `validator`, or `docs`.
+**Format:** `<type>(<scope>): <description>`. The type is required; the scope is
+optional. Valid types are `feat`, `fix`, `docs`, `refactor`, `perf`, `test`,
+`build`, `ci`, `chore`, and `revert`.
+
+**Scopes** that help most here: `corpus`, `dialect`, `validator`, `agent`, `cli`,
+`docs`.
+
+**Writing the description:**
+
+- **Imperative mood.** "add" not "added" or "adds". The subject completes the
+  sentence "this commit will…".
+- **No trailing period.** One line, under 72 characters.
+- **Describe the change, not the mistake.** History is permanent and is read by
+  people deciding whether to trust this project. A subject line is not the place
+  to narrate how a problem got there.
+- **The body explains why**, for changes where the reason is not obvious from
+  the diff. Wrap at 72 characters. Omit it for self-explanatory changes.
+
+**Squash before pushing, not after.** If a commit is unpushed and its message
+does not say what the change actually did, amend it. History that has not left
+your machine is not a record yet.
 
 ## Adding a new scripting language
 
