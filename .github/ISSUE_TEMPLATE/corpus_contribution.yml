@@ -60,7 +60,7 @@ body:
     attributes:
       label: Minimal example, if you have one
       description: A short snippet that uses this built-in correctly. Examples we did not author must be paraphrased, not copied.
-      render: code
+      render: text
 
   - type: checkboxes
     id: checks
